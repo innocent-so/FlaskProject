@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>
+        Continents...
+    </h1>
+
+    {% for row in rows%}
+        <h3>{{row['name']}}</h3>
+        <a href="{{ url_for('detail', continent_id= row['id'])}}" class="btn btn-secondary d-grid gap-2">view countries in continent</a>
+    {% endfor %}
+{% endblock %}

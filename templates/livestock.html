@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>Livestocks</h1>
+    <div class="container">
+        Cattle | Sheep | Goat | Pig | Eguines | Buffallo | Camel
+        {% for livestock in livestocks %}
+        <hr>
+        {{livestock['cattle']}} | {{livestock['sheep']}} | {{livestock['goat']}} | {{livestock['pig']}} | {{livestock['eguines']}} | {{livestock['buffallo']}} | {{livestock['camel']}}
+        {% endfor %}
+    </div>
+{% endblock %}
